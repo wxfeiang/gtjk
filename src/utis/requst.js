@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { Notification } from 'element-ui';
-import Vue from 'vue';
-Vue.prototype.$notify = Notification;
+// import { Message, Notification } from 'element-ui';
+
 //import router from './router'
 
 let loading        //定义loading变量
@@ -42,6 +41,16 @@ console.log(error)
 
 console.log("这里是统一返回的错误")
      console.log(error)
+    //  Message({
+    //     message: '这里是统一返回的错误',
+    //     type: 'error',
+    //     duration: 5 * 1000
+    //   })
+    //   Notification({
+    //     title: '提示',
+    //     message: '这是一条不会自动关闭的消息',
+    //     duration: 0
+    //   })
     return Promise.reject(error)
 })
 
